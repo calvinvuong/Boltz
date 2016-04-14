@@ -97,7 +97,7 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -217,7 +217,75 @@ public class Picture extends SimplePicture
     }
   }
   
-  
+    // exercise 3
+    public void keepOnlyBlue() {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		pixelObj.setRed(0);
+		pixelObj.setGreen(0);
+	    }
+	}
+    }
+
+    public void keepOnlyRed() {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		pixelObj.setBlue(0);
+		pixelObj.setGreen(0);
+	    }
+	}
+    }
+
+    public void keepOnlyGreen() {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		pixelObj.setRed(0);
+		pixelObj.setBlue(0);
+	    }
+	}
+    }
+
+    // exercise 4
+    public void negate() {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		pixelObj.setRed(255 - pixelObj.getRed());
+		pixelObj.setGreen(255 - pixelObj.getGreen());
+		pixelObj.setBlue(255 - pixelObj.getBlue());
+	    }
+	}
+    }
+
+    // exercise 5
+    public void grayscale() {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		int RGBAverage = (int) ( ( pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue() ) / 3.0 );
+		pixelObj.setRed(RGBAverage);
+		pixelObj.setGreen(RGBAverage);
+		pixelObj.setBlue(RGBAverage);
+	    }
+	}
+    }
+
+    // exercise 6
+    public void fixUnderwater() { 
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels){
+	    for (Pixel pixelObj : rowArray){
+		if ( pixelObj.getBlue() < 160 )
+		    pixelObj.setBlue(0);
+		else
+		    pixelObj.setBlue(255);
+	    }
+	}
+    }
+
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
