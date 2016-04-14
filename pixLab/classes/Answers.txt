@@ -1,0 +1,8 @@
+A5:
+1. Yes
+2. Yes
+3. No, Digital Picture is an interface, thus it cannot be instantiated
+4. Yes, Simple Picture implements Digital Picture
+5. Yes, because Picture extends SimplePicture, so it also inherits the implementation
+6. Yes, because Picture extends SimplePicture
+7. No, because SimplePicture is above Picture in the hierarchy
