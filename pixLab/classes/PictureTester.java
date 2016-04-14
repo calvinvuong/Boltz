@@ -51,7 +51,7 @@ public class PictureTester
     swan.explore();
   }
 
-    // exercise 3
+    // activity 5 exercise 3
     // method to test keepOnlyBlue()
     public static void testKeepOnlyBlue() {
 	Picture beach = new Picture("beach.jpg");
@@ -60,7 +60,7 @@ public class PictureTester
 	beach.explore();
     }
 
-    // exercise 4
+    // activity 5 exercise 4
     // method to test negate()
     public static void testNegate() {
 	Picture beach = new Picture("beach.jpg");
@@ -69,7 +69,7 @@ public class PictureTester
 	beach.explore();
     }
     
-    // exercise 5
+    // activity 5 exercise 5
     // method to test grayscale()
     public static void testGrayscale() {
 	Picture beach = new Picture("beach.jpg");
@@ -78,13 +78,37 @@ public class PictureTester
 	beach.explore();
     }
   
-    // exercise 6
+    // activity 5 exercise 6
     // method to test fixUnderwater()
     public static void testFixUnderwater() {
 	Picture water = new Picture("water.jpg");
 	water.explore();
 	water.fixUnderwater();
 	water.explore();
+    }
+
+    // activity 6 exercise 1
+    public static void testMirrorVerticalRightToLeft() {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+	caterpillar.explore();
+	caterpillar.mirrorVerticalRightToLeft();
+	caterpillar.explore();
+    }
+
+    // activity 6 exercise 2
+    public static void testMirrorHorizontal() {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+	caterpillar.explore();
+	caterpillar.mirrorHorizontal();
+	caterpillar.explore();
+    }
+
+    // activity 6 exercise 3
+    public static void testMirrorHorizontalBotToTop() {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+	caterpillar.explore();
+	caterpillar.mirrorHorizontalBotToTop();
+	caterpillar.explore();
     }
 
   /** Main method for testing.  Every class can have a main
@@ -100,8 +124,11 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    testFixUnderwater();
+    //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+      testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

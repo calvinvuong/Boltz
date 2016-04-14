@@ -217,7 +217,7 @@ public class Picture extends SimplePicture
     }
   }
   
-    // exercise 3
+    // activity 5 exercise 3
     public void keepOnlyBlue() {
 	Pixel[][] pixels = this.getPixels2D();
 	for (Pixel[] rowArray : pixels){
@@ -248,7 +248,7 @@ public class Picture extends SimplePicture
 	}
     }
 
-    // exercise 4
+    // activity 5 exercise 4
     public void negate() {
 	Pixel[][] pixels = this.getPixels2D();
 	for (Pixel[] rowArray : pixels){
@@ -260,7 +260,7 @@ public class Picture extends SimplePicture
 	}
     }
 
-    // exercise 5
+    // activity 5 exercise 5
     public void grayscale() {
 	Pixel[][] pixels = this.getPixels2D();
 	for (Pixel[] rowArray : pixels){
@@ -273,7 +273,7 @@ public class Picture extends SimplePicture
 	}
     }
 
-    // exercise 6
+    // activity 5 exercise 6
     public void fixUnderwater() { 
 	Pixel[][] pixels = this.getPixels2D();
 	for (Pixel[] rowArray : pixels){
@@ -282,6 +282,51 @@ public class Picture extends SimplePicture
 		    pixelObj.setBlue(0);
 		else
 		    pixelObj.setBlue(255);
+	    }
+	}
+    }
+
+    // activity 6 exercise 1
+    public void mirrorVerticalRightToLeft() {
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel leftPixel = null;
+	Pixel rightPixel = null;
+	int width = pixels[0].length;
+	for (int row = 0; row < pixels.length; row++){
+	    for (int col = width-1; col > width / 2; col--){
+		rightPixel = pixels[row][col];
+		leftPixel = pixels[row][width - 1 - col];
+		leftPixel.setColor(rightPixel.getColor());
+	    }
+	} 
+    }
+    
+    // activity 6 exercise 2
+    public void mirrorHorizontal() {
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel topPixel = null;
+	Pixel bottomPixel = null;
+	int height = pixels.length;
+	for ( int row = 0; row < height / 2; row++ ){
+	    for ( int col = 0; col < pixels[row].length; col++ ){
+		topPixel = pixels[row][col];
+		bottomPixel = pixels[height-1-row][col];
+		bottomPixel.setColor(topPixel.getColor());
+	    }
+	}
+    }
+
+    // activity 6 exercise 3
+    public void mirrorHorizontalBotToTop() {
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel topPixel = null;
+	Pixel bottomPixel = null;
+	int height = pixels.length;
+	for ( int row = 0; row < height / 2; row++ ){
+	    for ( int col = 0; col < pixels[row].length; col++ ){
+		topPixel = pixels[row][col];
+		bottomPixel = pixels[height-1-row][col];
+		topPixel.setColor(bottomPixel.getColor());
 	    }
 	}
     }
