@@ -98,5 +98,43 @@ public class IntArrayWorker
       }
     }
   }
+
+    // exercise 1
+    public int getCount(int target) {
+	int timesEncountered = 0;
+	for ( int row = 0; row < matrix.length; row++ ){
+	    for ( int col = 0; col < matrix[row].length; col++ ){
+		if ( matrix[row][col] == target )
+		    timesEncountered += 1;
+	    }
+	}
+	return timesEncountered;
+    }
+    
+    // exercise 2
+    // uses reigning champ algo
+    public int getLargest() {
+	int currentLargest = matrix[0][0];
+	for ( int row = 0; row < matrix.length; row++ ){
+	    for ( int col = 0; col < matrix[row].length; col++ ){
+		if ( matrix[row][col] > currentLargest )
+		    currentLargest = matrix[row][col]; // new champ
+	    }
+	}
+	return currentLargest;
+    }
+
+    // exercise 3
+    public int getColTotal(int targetCol) {
+	int total = 0;
+	for ( int row = 0; row < matrix.length; row++ ){
+	    for ( int col = 0; col < matrix[row].length; col++ ){
+		if ( col == targetCol ) // are we at desired column?
+		    total += matrix[row][col];
+	    }
+	}
+	return total;
+    }
+	    
  
 }
