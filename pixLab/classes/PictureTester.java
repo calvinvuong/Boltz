@@ -1,10 +1,10 @@
 /**
  * This class contains class (static) methods
- * that will help you test the Picture class 
+ * that will help you test the Picture class
  * methods.  Uncomment the methods and the code
  * in the main to test.
- * 
- * @author Barbara Ericson 
+ *
+ * @author Barbara Ericson
  */
 public class PictureTester
 {
@@ -16,7 +16,7 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-    
+
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -25,7 +25,7 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
-  
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -34,19 +34,19 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
+
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("beach.jpg");
     canvas.createCollage();
     canvas.explore();
   }
-  
+
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("beach.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -68,7 +68,7 @@ public class PictureTester
 	beach.negate();
 	beach.explore();
     }
-    
+
     // activity 5 exercise 5
     // method to test grayscale()
     public static void testGrayscale() {
@@ -77,7 +77,7 @@ public class PictureTester
 	beach.grayscale();
 	beach.explore();
     }
-  
+
     // activity 5 exercise 6
     // method to test fixUnderwater()
     public static void testFixUnderwater() {
@@ -111,6 +111,44 @@ public class PictureTester
 	caterpillar.explore();
     }
 
+    // activity 6 challenge
+    public static void testMirrorDiagonal() {
+  Picture caterpillar = new Picture("caterpillar.jpg");
+  caterpillar.explore();
+  caterpillar.mirrorDiagonal();
+  caterpillar.explore();
+    }
+
+
+
+ public static void testMirrorArms()
+ {
+   Picture snowman = new Picture("snowman.jpg");
+   snowman.explore();
+   snowman.mirrorArms();
+   snowman.explore();
+ }
+
+ public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+
+
+
+
+  public static void testCopy()
+  {
+    Picture canvas = new Picture("beach.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+
+
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -128,12 +166,12 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
     //testMirrorHorizontal();
-      testMirrorHorizontalBotToTop();
+    //  testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();

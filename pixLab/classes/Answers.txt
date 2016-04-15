@@ -1,8 +1,39 @@
+Team Boltz - Kathy Lau, Calvin Vuong
+
+A1:
+1. 8 bits
+2. 3 bytes
+3. 680 * 480 = 307200 pixels
+
+A2.
+1. r=255 g=0 b=255
+2. r=255 g=255 b=0
+3. r=115 g=0 b=255
+4. r=255 g=255 b=255
+5. r=75 g=75 b=75
+
+
+A3.
+1. Row index of top left corner : 0
+2. Col index of top left corner : 0
+3. Since the width of the picture is 640, the right most col index is 639
+4. Since the height of the pic is 480, the bottom most row index is 479
+5. Row index increases from top to bottom
+6. Col index increases from left to right
+7. Yes
+
 A5:
-1. Yes
+1. No
 2. Yes
 3. No, Digital Picture is an interface, thus it cannot be instantiated
 4. Yes, Simple Picture implements Digital Picture
 5. Yes, because Picture extends SimplePicture, so it also inherits the implementation
 6. Yes, because Picture extends SimplePicture
 7. No, because SimplePicture is above Picture in the hierarchy
+
+A7:
+1. 10*9 = 90
+2. 6*15 = 90
+
+A9:
+1. 2
